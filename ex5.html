@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+    let d=document.querySelector("#root");
+let  livres=[{id :10,titre : 'POO',auteur :'RAMI',prix :300}, 
+{id :11,titre : 'JS ES6',auteur :'FAMI',prix :230}, 
+{id :12,titre : 'Algorithme',auteur :'KARIMI',prix :330}, 
+{id :13,titre : 'HTMH& CSS',auteur :'RAMI',prix :340}];
+/*q1*/
+let t1=livres.map(x=>x.titre);
+console.log(t1);
+/*q2*/
+let t2=livres.filter(x=>x.auteur.toUpperCase()=='RAMI');
+let tq2=t2.map(x=>x.titre);
+console.log(tq2)
+/*q3*/
+let oj=livres.find(x=>x.id==12)
+console.log(oj)
+/*q4 methode 1*/
+let somme=livres.map(x=>x.prix).reduce((totale,x)=>totale+x)
+console.log(somme)
+/*methode 2*/
+let somme2=livres.reduce((totale,x)=>totale+x.prix,{})
+console.log(somme2);
+/**q5  */
+let R=[...livres]
+    </script>
+</body>
+</html>
